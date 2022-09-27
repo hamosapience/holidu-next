@@ -13,8 +13,7 @@ export const createServer = () => {
     .use(json())
     .use(cors())
     .get("/c", (req, res) => {
-      fooBar()
-      return res.json({ message: `CHECKOUT: hello` });
+      return res.json({ message: `CHECKOUT: hello ${fooBar()}` });
     })
 
   return app;
