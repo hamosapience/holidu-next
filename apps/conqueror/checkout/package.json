@@ -1,6 +1,6 @@
 {
   "name": "checkout",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "tsup src/index.ts --format cjs",
@@ -14,7 +14,7 @@
     "preset": "jest-presets/jest/node"
   },
   "dependencies": {
-    "@hamosapience/node-lib": "1.0.0",
+    "@hamosapience/node-lib": "2.0.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
