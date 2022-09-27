@@ -1,6 +1,6 @@
 {
   "name": "checkout",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "tsup src/index.ts --format cjs",
@@ -20,7 +20,7 @@
     "logger": "*",
     "morgan": "^1.10.0",
     "ui": "*",
-    "@hamosapience/node-lib": "1.0.0"
+    "@hamosapience/node-lib": "1.0.1"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.0",
