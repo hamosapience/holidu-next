@@ -12,7 +12,8 @@
     "lint": "turbo run lint",
     "test": "turbo run test",
     "graph": "turbo run build --graph=graph.html",
-    "changeset": "changeset"
+    "changeset": "changeset",
+    "release": "turbo run build --filter=node-lib && changeset publish"
   },
   "devDependencies": {
     "prettier": "^2.7.1",

@@ -20,7 +20,7 @@
     "logger": "*",
     "morgan": "^1.10.0",
     "ui": "*",
-    "node-lib": "1.0.0"
+    "@hamosapience/node-lib": "1.0.0"
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.0",
