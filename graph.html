@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Graph</title>
+    </head>
+    <body>
+      <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2-pre.1/viz.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/viz.js@2.1.2-pre.1/full.render.js"></script>
+      <script>const s = `digraph {
+	compound = "true"
+	newrank = "true"
+	subgraph "root" {
+		"[root] #build" -> "[root] ___ROOT___#build"
+		"[root] @hamosapience/node-lib#build" -> "[root] ___ROOT___#build"
+		"[root] ___ROOT___#build" -> "[root] ___ROOT___"
+		"[root] checkout#build" -> "[root] @hamosapience/node-lib#build"
+		"[root] checkout#build" -> "[root] eslint-config-custom-server#build"
+		"[root] checkout#build" -> "[root] jest-presets#build"
+		"[root] checkout#build" -> "[root] logger#build"
+		"[root] checkout#build" -> "[root] tsconfig#build"
+		"[root] checkout#build" -> "[root] ui#build"
+		"[root] dev-proxy#build" -> "[root] eslint-config-custom-server#build"
+		"[root] dev-proxy#build" -> "[root] jest-presets#build"
+		"[root] dev-proxy#build" -> "[root] logger#build"
+		"[root] dev-proxy#build" -> "[root] tsconfig#build"
+		"[root] eslint-config-custom#build" -> "[root] ___ROOT___#build"
+		"[root] eslint-config-custom-server#build" -> "[root] ___ROOT___#build"
+		"[root] home#build" -> "[root] eslint-config-custom-server#build"
+		"[root] home#build" -> "[root] jest-presets#build"
+		"[root] home#build" -> "[root] logger#build"
+		"[root] home#build" -> "[root] tsconfig#build"
+		"[root] home#build" -> "[root] ui#build"
+		"[root] jest-presets#build" -> "[root] ___ROOT___#build"
+		"[root] legacy#build" -> "[root] eslint-config-custom-server#build"
+		"[root] legacy#build" -> "[root] jest-presets#build"
+		"[root] legacy#build" -> "[root] logger#build"
+		"[root] legacy#build" -> "[root] tsconfig#build"
+		"[root] logger#build" -> "[root] eslint-config-custom#build"
+		"[root] logger#build" -> "[root] jest-presets#build"
+		"[root] logger#build" -> "[root] tsconfig#build"
+		"[root] search#build" -> "[root] @hamosapience/node-lib#build"
+		"[root] search#build" -> "[root] eslint-config-custom-server#build"
+		"[root] search#build" -> "[root] jest-presets#build"
+		"[root] search#build" -> "[root] logger#build"
+		"[root] search#build" -> "[root] tsconfig#build"
+		"[root] search#build" -> "[root] ui#build"
+		"[root] seo#build" -> "[root] eslint-config-custom#build"
+		"[root] seo#build" -> "[root] logger#build"
+		"[root] seo#build" -> "[root] tsconfig#build"
+		"[root] seo#build" -> "[root] ui#build"
+		"[root] tsconfig#build" -> "[root] ___ROOT___#build"
+		"[root] ui#build" -> "[root] eslint-config-custom#build"
+		"[root] ui#build" -> "[root] jest-presets#build"
+		"[root] ui#build" -> "[root] tsconfig#build"
+	}
+}
+`.replace(/\_\_\_ROOT\_\_\_/g, "Root").replace(/\[root\]/g, "");new Viz().renderSVGElement(s).then(el => document.body.appendChild(el)).catch(e => console.error(e));
+    </script>
+  </body>
+  </html>
