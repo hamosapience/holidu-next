@@ -10,7 +10,8 @@
     "dev": "turbo run dev --no-cache --parallel --continue",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "graph": "turbo run build --graph=graph.html"
   },
   "devDependencies": {
     "prettier": "^2.7.1",
