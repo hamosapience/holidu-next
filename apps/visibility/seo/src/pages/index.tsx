@@ -10,15 +10,9 @@ export default function Store() {
         <title>Store | Kitchen Sink</title>
       </Head>
       <h1 className="title">
-        Store <br />
-        <span>Kitchen Sink</span>
+        SEO PAGE
       </h1>
       <CounterButton />
-      <p className="description">
-        Built With{" "}
-        <NewTabLink href="https://turborepo.org/">Turborepo</NewTabLink> +{" "}
-        <NewTabLink href="https://nextjs.org/">Next.js</NewTabLink>
-      </p>
     </div>
   );
 }

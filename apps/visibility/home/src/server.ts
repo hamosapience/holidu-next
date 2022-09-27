@@ -11,8 +11,8 @@ export const createServer = () => {
     .use(urlencoded({ extended: true }))
     .use(json())
     .use(cors())
-    .get("*", (req, res) => {
-      return res.json({ message: `LEGACY: hello ${req.params.name}` });
+    .get("/", (req, res) => {
+      return res.json({ message: `HOME PAGE: hello` });
     })
 
   return app;

@@ -11,12 +11,9 @@ export const createServer = () => {
     .use(urlencoded({ extended: true }))
     .use(json())
     .use(cors())
-    .get("/message/:name", (req, res) => {
-      return res.json({ message: `hello ${req.params.name}` });
+    .get("/s", (req, res) => {
+      return res.json({ message: `SEARCH PAGE: hello` });
     })
-    .get("/healthz", (req, res) => {
-      return res.json({ ok: true });
-    });
 
   return app;
 };
