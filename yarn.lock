@@ -544,10 +544,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@hamosapience/node-lib@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@hamosapience/node-lib/-/node-lib-3.0.0.tgz#59dd1c9f735d7655651acb5158900bb186a71b51"
-  integrity sha512-LBubibPGjUl0HkpKuqDEP2LIj3Nace3gk+aoxEICHi1nTx0UI8PgYhgdjSUTTgjw8SnLtV4T9MxQcBF+ElT/Mg==
+"@hamosapience/node-lib@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@hamosapience/node-lib/-/node-lib-4.0.0.tgz#be6e89e4cb299a20acb6361a60a2887d11b797d2"
+  integrity sha512-qwrgbaLwTVjwrEosHfdloFW75avmXZDTd3fZqtry5mXW2YhojQCi4Itqa2Dw/wsNxjmQK/zk8jbC01sv5F0lEw==
   dependencies:
     tsup "^6.2.3"
 
