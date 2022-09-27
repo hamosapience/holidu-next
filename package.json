@@ -11,10 +11,15 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "graph": "turbo run build --graph=graph.html"
+    "graph": "turbo run build --graph=graph.html",
+    "changeset": "changeset"
   },
   "devDependencies": {
     "prettier": "^2.7.1",
     "turbo": "latest"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.24.4"
   }
 }
+
