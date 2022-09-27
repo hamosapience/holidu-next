@@ -1,5 +1,12 @@
 # checkout
 
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @hamosapience/node-lib@3.0.0
+
 ## 0.0.1
 
 ### Patch Changes

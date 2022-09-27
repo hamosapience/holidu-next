@@ -1,3 +1,3 @@
 export const fooBar = () => {
-  console.log('fooBar 2.0.0')
+  return ('fooBar 3.0.0')
 }
