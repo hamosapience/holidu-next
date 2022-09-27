@@ -1,36 +1,33 @@
-import httpProxy from 'http-proxy';
-import http from 'http'
+import express, {Request} from 'express';
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
-const proxy = httpProxy.createProxyServer({});
+const app = express();
 
-const server = http.createServer(function (req, res) {
-  const {url} = req
+const routes = {
+    '^/$': 'http://localhost:3001',
+    '/seo': 'http://localhost:3002',
+    '/s': 'http://localhost:3003',
+    '/c': 'http://localhost:3004',
+    '.*': 'http://localhost:3005',
+} as const
 
-  if (url === '/') {
-    proxy.web(req, res, {target: 'http://127.0.0.1:3001'});
-    return
-  }
+app.use(
+  '*',
+  createProxyMiddleware({
+    router: (req: Request)  => {
+        for (let route of Object.keys(routes)) {
+            const r = new RegExp(route)
+            if (req.url.match(r)) {
+                return (routes as any)[route]
+            }
+        }
+    },
+    changeOrigin: true,
+  })
+);
 
-  if (url?.startsWith('/seo')) {
-    proxy.web(req, res, {target: 'http://127.0.0.1:3002'});
-    return
-  }
+app.listen(3000);
 
-  if (url?.startsWith('/s')) {
-    proxy.web(req, res, {target: 'http://127.0.0.1:3003'});
-    return
-  }
-
-  if (url?.startsWith('/c')) {
-    proxy.web(req, res, {target: 'http://127.0.0.1:3004'});
-    return
-  }
-
-  proxy.web(req, res, {target: 'http://127.0.0.1:3005'});
-});
-
-console.log("listening on port 3000")
-server.listen(3000);
 
 
 
