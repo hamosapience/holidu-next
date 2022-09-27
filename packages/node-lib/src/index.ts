@@ -1,3 +1,3 @@
 export const fooBar = () => {
-  console.log('fooBar 2')
+  console.log('fooBar new')
 }

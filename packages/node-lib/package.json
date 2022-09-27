@@ -1,6 +1,6 @@
 {
   "name": "@hamosapience/node-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "dependencies": {
     "tsup": "^6.2.3"
