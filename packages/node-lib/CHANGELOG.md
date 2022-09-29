@@ -1,5 +1,11 @@
 # @hamosapience/node-lib
 
+## 4.1.0
+
+### Minor Changes
+
+- Bump version
+
 ## 4.0.2
 
 ### Patch Changes

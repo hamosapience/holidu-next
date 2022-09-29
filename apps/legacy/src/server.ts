@@ -12,7 +12,7 @@ export const createServer = () => {
     .use(json())
     .use(cors())
     .get("*", (req, res) => {
-      return res.json({ message: `LEGACY: hello ${req.params.name}` });
+      return res.json({ message: `LEGACY: hello` });
     })
 
   return app;
